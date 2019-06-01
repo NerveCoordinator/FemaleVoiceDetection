@@ -1,4 +1,4 @@
-Forked from (https://github.com/ideo/LaughDetection), see readme there for details. I suggest getting it up and running before returning. I am unsatisfied by its custom training instructions however.
+Forked from (https://github.com/ideo/LaughDetection), see readme there for details. I suggest getting it up and running before returning. I am unsatisfied by its custom training instructions, so here was what I did to make it work. I forget what I needed to pip install, but I don't think there are any new dependencies.
 
 I wanted real time feedback. In my use case, detecting female voices. 
 
@@ -50,4 +50,4 @@ If you picked a different model you'll need to change `'keras_model', 'Models/LS
 
 Run `python live_plotting.py`, and it should just work. 
 
-You can play around with `sample_length` and `RATE`, although I've found 3 seconds to work pretty well.
+You can play around with `sample_length` and `RATE`, although I've found 3 seconds at 16000 to work pretty well.
