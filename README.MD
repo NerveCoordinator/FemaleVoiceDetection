@@ -1,3 +1,5 @@
+Forked from (https://github.com/ideo/LaughDetection)
+
 # Laugh Detector
 
 This is the code accompanying blog posts (Here and Here) for training and running a laugh detector. This project is based on [AudioSet](https://research.google.com/audioset/) and includes a rebalanced subset of their data and utilizes their pre-trained audio feature vectorizer [vggish](https://github.com/tensorflow/models/tree/master/research/audioset). I also followed the lead of a [similar project](https://github.com/ganesh-srinivas/laughter) for processing the AudioSet data and choosing network architectures
