@@ -1,4 +1,4 @@
-Forked from (https://github.com/ideo/LaughDetection), see readme there for details. I suggest getting it up and running before returning. I am unsatisfied by its custom training instructions, so here was what I did to make it work. I forget what I needed to pip install, but I don't think there are any new dependencies.
+Forked from (https://github.com/ideo/LaughDetection), see readme there for details. I am unsatisfied by its custom training instructions, so here was what I did to make it work. I forget what I needed to pip install, but I don't think there are any new dependencies. Follow the instructions there until you can run `live_inference.py` and get real time measurements of laughter-confidence
 
 I wanted real time feedback. In my use case, detecting female voices. 
 
