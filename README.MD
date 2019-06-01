@@ -51,3 +51,7 @@ If you picked a different model you'll need to change `'keras_model', 'Models/LS
 Run `python live_plotting.py`, and it should just work. 
 
 You can play around with `sample_length` and `RATE`, although I've found 3 seconds at 16000 to work pretty well.
+
+[This](https://www.youtube.com/watch?v=21ZfGPp-Ves) is a wonderful video to test it with. 
+
+I've found that LSTM_SingleLayer_100Epochs.h5 at sample_length 3.0 and RATE 16000 works perfectly with the above video. Shockingly reliably. 
