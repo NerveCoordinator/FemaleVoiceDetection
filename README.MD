@@ -41,16 +41,16 @@ The train set took me an hour to generate.
 
 # Training
 
-You can use `Notebooks/ModelTraining.ipynb` normally, but you'll have to update `post = "female"` here as well. Make sure it saves, and keep track of the model you trained. If you trained `LSTM_ThreeLayer_100Epochs.h5` then it will work just fine in testing. If not, see next section. 
+You can use `Notebooks/ModelTraining.ipynb` normally, but you'll have to update `post = "female"` here as well. Make sure it saves, and keep track of the model you trained. If you trained `LSTM_SingleLayer_100Epochs.h5` then it will work just fine in testing. If not, see next section. 
 
 # Testing
 I found pavucontrol's [monitors](https://unix.stackexchange.com/questions/82259/how-to-pipe-audio-output-to-mic-input/82297) the most reliably way to test the setup. My own microphone is sadly very low quality, but I could simply direct a youtube video at this and see consistent results.
 
-If you picked a different model you'll need to change `'keras_model', 'Models/LSTM_ThreeLayer_100Epochs.h5',` in live_plotting.py to the model you chose.
+If you picked a different model you'll need to change `'keras_model', 'Models/LSTM_SingleLayer_100Epochs.h5',` in live_plotting.py to the model you chose.
 
 Run `python live_plotting.py`, and it should just work. 
 
-You can play around with `sample_length` and `RATE`, although I've found 3 seconds at 16000 to work pretty well.
+You can play around with `sample_length` and `RATE` if you want.
 
 [This](https://www.youtube.com/watch?v=21ZfGPp-Ves) is a wonderful video to test it with. 
 
