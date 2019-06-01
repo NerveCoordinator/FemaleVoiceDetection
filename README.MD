@@ -47,4 +47,7 @@ You can use `Notebooks/ModelTraining.ipynb` normally, but you'll have to update 
 I found pavucontrol's [monitors](https://unix.stackexchange.com/questions/82259/how-to-pipe-audio-output-to-mic-input/82297) the most reliably way to test the setup. My own microphone is sadly very low quality, but I could simply direct a youtube video at this and see consistent results.
 
 If you picked a different model you'll need to change `'keras_model', 'Models/LSTM_ThreeLayer_100Epochs.h5',` in live_plotting.py to the model you chose.
-Run `python live_plotting.py`, and it should just work. You can play around with `sample_length` and `RATE`, although I've found 3 seconds to work pretty well.
+
+Run `python live_plotting.py`, and it should just work. 
+
+You can play around with `sample_length` and `RATE`, although I've found 3 seconds to work pretty well.
