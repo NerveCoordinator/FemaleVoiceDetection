@@ -11,7 +11,7 @@ from laugh_detector.microphone_stream import MicrophoneStream
 flags = tf.app.flags
 
 flags.DEFINE_string(
-    'keras_model', 'Models/LSTM_ThreeLayer_100Epochs.h5',
+    'keras_model', 'Models/LSTM_SingleLayer_100Epochs.h5',
     'Path to trained keras model that will be used to run inference.')
 
 flags.DEFINE_float(
