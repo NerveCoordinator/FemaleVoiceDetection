@@ -23,14 +23,20 @@ For my use case, I made the following files:
 ```
 The "not_" prefix is to stay in keeping with the original repo's naming convention. Since its use case was laughter vs speech it made more sense. 
 
-# testing
-I found pavucontrol's [monitors](https://unix.stackexchange.com/questions/82259/how-to-pipe-audio-output-to-mic-input/82297) the most reliably way to test the setup. I could simply direct a youtube video at it and see consistent results before using my microphone. 
+For your class, change "female" in the filenames to whatever you want to detect, and change the contents of the file to the appropriate labels from the ontology mentioned before. Keep in mind what you have to distinguish it from. As an example, the laughter detector tried to distinguish laughter from speech. In my use case I simply want to know how female the user sounds. 
 
 
-The pre-trained models and re-balanced subset data are all licensed under a [Creative Commons Attribution 4.0 International License.](https://creativecommons.org/licenses/by/4.0/)
+now run `jupyter-notebook`, open up `Notebooks/AudiosetProcessingGeneral`. In it you will see a line `pos = "female"`. Change 'female' to the same thing as your filenames. 
 
-If you want to create your own processed subset of the AudioSet data on a different collection of labels, you can follow the code in `Notebooks/AudiosetProcessing.ipynb`. You can create your own subsets of the Audioset data by creating a list of labels to use for the positive and negative cases.
+You should be able to just run the notebook now, although I had trouble with two things:
 
+I had to run `wget http://storage.googleapis.com/us_audioset/youtube_corpus/v1/features/features.tar.gz` manually
 
+My positive class had fewer examples than my negative class, which gave an error. So if you get an error in this step, switch it to the other.
+```
+negative = labels[labels[neg]==True]#.sample(positive.shape[0])
+positive = labels[labels[pos]==True].sample(negative.shape[0])
+```
 
-
+# Testing
+I found pavucontrol's [monitors](https://unix.stackexchange.com/questions/82259/how-to-pipe-audio-output-to-mic-input/82297) the most reliably way to test the setup. My own microphone is sadly very low quality, but I could simply direct a youtube video at this and see consistent results.
